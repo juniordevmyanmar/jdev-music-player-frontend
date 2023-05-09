@@ -1,16 +1,22 @@
-import React from 'react'
+import React from "react";
 
 interface buttonProps {
-    text: string
-    width?: string
+  text: string;
+  width?: string;
+  loading?: boolean;
 }
 
-function Button({text,width}: buttonProps) {
+function Button({ text, width,loading }: buttonProps) {
   return (
-    <button className= {`bg-yellow-400 ${width ? width : 'w-full'} p-4 text-center rounded-md`}>
-        {text}
+    <button
+      className={`${loading ? 'bg-yellow-100' : 'bg-primary'}  ${
+        width ? width : "w-full"
+      } p-3 text-center rounded-md text-buttonContent`}
+      disabled={loading}
+    >
+      {loading ? 'loading' : text}
     </button>
-  )
+  );
 }
 
-export default Button
+export default Button;

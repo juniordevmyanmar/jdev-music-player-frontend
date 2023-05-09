@@ -1,13 +1,12 @@
 import React from 'react'
 import MainLayout from '../features/layout/MainLayout'
 
-
-function Homepage() {
+function ArtistPage() {
   return (
     <> 
-      <MainLayout><h1>HomePage</h1></MainLayout>
-    </>
+    <MainLayout><h1>Artists</h1></MainLayout>
+  </>
   )
 }
 
-export default Homepage
+export default ArtistPage
